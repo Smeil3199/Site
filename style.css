@@ -16,12 +16,12 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    background-image: url('logo.jpg'); /* Фон для шапки */
+    background-image: url('https://img.freepik.com/premium-vector/coffee-shop-logo-design-vector-template_733947-2202.jpg?w=996'); /* Фон для шапки */
     background-size: cover;
     background-position: center;
 }
 
-header .logo img {
+header .logo.jpg img {
     width: 100px; /* Логотип будет подстраиваться */
     height: auto;
 }
