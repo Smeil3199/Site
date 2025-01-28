@@ -16,6 +16,9 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    background-image: url('logo.jpg'); /* Фон для шапки */
+    background-size: cover;
+    background-position: center;
 }
 
 header .logo img {
@@ -51,6 +54,9 @@ header nav ul li a:hover {
     padding: 50px 20px;
     text-align: center;
     animation: fadeIn 1s ease-out; /* Плавное появление */
+    background-image: url('path/to/your-hero-background.jpg'); /* Пример фона для блока Hero */
+    background-size: cover;
+    background-position: center;
 }
 
 .hero h1 {
@@ -62,6 +68,7 @@ header nav ul li a:hover {
     padding: 20px;
     background-color: #fff;
     animation: fadeIn 1s ease-out;
+    border-radius: 10px;
 }
 
 .menu {
@@ -108,14 +115,18 @@ button {
     background-color: #ff6347;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 15px 30px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавное изменение фона и размера */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Плавное изменение фона и тени */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
 }
 
 button:hover {
     background-color: #e5533d;
     transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Усиливаем тень при наведении */
 }
 
 form {
@@ -208,6 +219,11 @@ form input:focus, form textarea:focus {
     button {
         padding: 8px;
     }
+
+    form input, form textarea {
+        padding: 8px;
+    }
+}
 
     form input, form textarea {
         padding: 8px;
