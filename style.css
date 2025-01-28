@@ -1,68 +1,173 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: #2d3e50;
     color: white;
-    padding: 10px 0;
+    padding: 20px;
     text-align: center;
 }
 
+header .logo img {
+    width: 100px; /* Логотип будет подстраиваться */
+    height: auto;
+}
+
 header nav ul {
-    list-style-type: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
     padding: 0;
 }
 
 header nav ul li {
-    display: inline;
-    margin-right: 15px;
+    margin: 0 15px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-section {
+.hero {
+    background-color: #ff6347;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.special-offers {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.menu {
     padding: 20px;
 }
 
-h2 {
-    color: #333;
-}
-
-.menu-category {
+.menu .category {
     margin-bottom: 30px;
 }
 
-.menu-item {
+.menu .dish {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
-.menu-item img {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
+.menu .dish img {
+    width: 80px; /* Ограничим размер изображений */
+    height: 80px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
 button {
-    padding: 10px;
-    background-color: #333;
+    background-color: #ff6347;
     color: white;
     border: none;
+    padding: 10px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #e5533d;
 }
 
-#cart {
-    margin-bottom: 20px;
+form {
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
 }
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Меню становится вертикальным на мобильных */
+        margin-top: 15px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .special-offers, .menu, .contacts {
+        padding: 15px;
+    }
+
+    .menu .dish {
+        flex-direction: column; /* Блюда выводятся по одному */
+        align-items: flex-start;
+    }
+
+    .menu .dish img {
+        width: 60px; /* Уменьшаем изображения для мобильных */
+        height: 60px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    header .logo img {
+        width: 80px; /* Уменьшаем логотип на маленьких экранах */
+    }
+
+    .hero h1 {
+        font-size: 24px; /* Меньше заголовок */
+    }
+
+    .special-offers ul {
+        font-size: 14px; /* Меньше текст в блоке акций */
+    }
+
+    .menu .dish p {
+        font-size: 14px; /* Уменьшаем шрифт цен */
+    }
+
+    button {
+        padding: 8px;
+    }
+
+    form input, form textarea {
+        padding: 8px;
+    }
+}
+
