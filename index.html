@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафе с доставкой еды</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в наше кафе!</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#order">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>О кафе</h2>
+        <p>Наше кафе существует с 2010 года и славится вкусными домашними блюдами и особенным подходом к приготовлению еды. Мы предлагаем самые лучшие блюда, приготовленные из свежих продуктов.</p>
+        <h3>Наши особенности:</h3>
+        <ul>
+            <li>Только свежие продукты</li>
+            <li>Уникальные рецепты</li>
+            <li>Быстрая доставка</li>
+        </ul>
+    </section>
+
+    <section id="special-offers">
+        <h2>Специальные предложения</h2>
+        <p>Скидки на все пиццы — 20%! Заказывайте прямо сейчас!</p>
+    </section>
+
+    <section id="menu">
+        <h2>Меню</h2>
+        <div class="menu-category">
+            <h3>Салаты</h3>
+            <div class="menu-item">
+                <img src="salad.jpg" alt="Салат">
+                <p>Свежий овощной салат - 150 руб.</p>
+                <button onclick="addToCart('Свежий овощной салат')">Добавить в корзину</button>
+            </div>
+        </div>
+        <div class="menu-category">
+            <h3>Основные блюда</h3>
+            <div class="menu-item">
+                <img src="main-dish.jpg" alt="Основное блюдо">
+                <p>Курица с картофелем - 350 руб.</p>
+                <button onclick="addToCart('Курица с картофелем')">Добавить в корзину</button>
+            </div>
+        </div>
+        <div class="menu-category">
+            <h3>Напитки</h3>
+            <div class="menu-item">
+                <img src="drink.jpg" alt="Напиток">
+                <p>Сок апельсиновый - 100 руб.</p>
+                <button onclick="addToCart('Сок апельсиновый')">Добавить в корзину</button>
+            </div>
+        </div>
+        <div class="menu-category">
+            <h3>Десерты</h3>
+            <div class="menu-item">
+                <img src="dessert.jpg" alt="Десерт">
+                <p>Торт шоколадный - 200 руб.</p>
+                <button onclick="addToCart('Торт шоколадный')">Добавить в корзину</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="order">
+        <h2>Корзина</h2>
+        <div id="cart"></div>
+        <button onclick="clearCart()">Очистить корзину</button>
+        <button onclick="checkout()">Оформить заказ</button>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Адрес: Москва, ул. Ленина, 15</p>
+        <p>Часы работы: Пн-Пт, с 9:00 до 21:00</p>
+        <form>
+            <label for="message">Ваше сообщение:</label><br>
+            <textarea id="message" rows="4" cols="50"></textarea><br>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Кафе с доставкой еды. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
